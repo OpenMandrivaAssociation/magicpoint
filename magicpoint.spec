@@ -72,4 +72,4 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/emacs/site-start.d/*
 %{_bindir}/*
 %{_mandir}/*/*
-%{_libdir}/X11/mgp/*
+%{_prefix}/lib/X11/mgp/*
