@@ -32,7 +32,7 @@ It includes a true type library for elegant looking text and effects.
 rm -rf $RPM_BUILD_ROOT
 
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 %patch1 -p1
 %patch2 -p1
 #%patch4 -p0
