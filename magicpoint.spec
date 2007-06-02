@@ -70,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc sample/
 %{_datadir}/emacs/site-lisp/*
 %config(noreplace) %{_sysconfdir}/emacs/site-start.d/*
-/usr/X11R6/bin/*
-/usr/X11R6/man/*/*
-/usr/X11R6/lib/X11/mgp
+%{_bindir}/*
+%{_mandir}/*/*
+%{_libdir}/X11/mgp/*
