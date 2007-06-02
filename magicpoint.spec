@@ -18,7 +18,7 @@ Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
 Patch5:         magicpoint-1.10a-missing-decl.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
 Buildrequires:  freetype-devel flex byacc X11-devel
-BuildRequires:	imake imlib-devel
+BuildRequires:	imake gccmakedep
 Requires:	fonts-ttf-japanese libjpeg-progs
 
 %description
