@@ -1,6 +1,6 @@
 %define name	magicpoint
 %define version 1.11b
-%define release 1mdk
+%define release %mkrel 2
 
 Summary:	Presentation tool
 Name:		%{name}
@@ -10,12 +10,12 @@ License:	BSD like
 URL:		http://member.wide.ad.jp/wg/mgp/
 Group:		Office
 Source:		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/%{name}-%{version}.tar.bz2
-Patch0:         magicpoint-1.10a-remove-rpath.patch.bz2
-Patch1:         magicpoint-1.09a-defaults-to-latin1.patch.bz2
-Patch2:         magicpoint-1.09a-emacs-mode--add-font-lock.patch.bz2
-Patch3:         magicpoint-1.09a-xfont-force-same-one.patch.bz2
-#Patch4:         magicpoint-1.10a-freetype.patch.bz2
-Patch5:         magicpoint-1.10a-missing-decl.patch.bz2
+Patch0:         magicpoint-1.10a-remove-rpath.patch
+Patch1:         magicpoint-1.09a-defaults-to-latin1.patch
+Patch2:         magicpoint-1.09a-emacs-mode--add-font-lock.patch
+Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
+#Patch4:         magicpoint-1.10a-freetype.patch
+Patch5:         magicpoint-1.10a-missing-decl.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
 Buildrequires:  freetype-devel flex byacc XFree86-devel
 Requires:	fonts-ttf-japanese libjpeg-progs
