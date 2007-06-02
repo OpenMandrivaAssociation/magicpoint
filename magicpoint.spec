@@ -1,6 +1,6 @@
 %define name	magicpoint
-%define version 1.11b
-%define release %mkrel 2
+%define version 1.12a
+%define release %mkrel 1
 
 Summary:	Presentation tool
 Name:		%{name}
@@ -17,7 +17,7 @@ Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
 #Patch4:         magicpoint-1.10a-freetype.patch
 Patch5:         magicpoint-1.10a-missing-decl.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
-Buildrequires:  freetype-devel flex byacc XFree86-devel
+Buildrequires:  freetype-devel flex byacc X11-devel
 Requires:	fonts-ttf-japanese libjpeg-progs
 
 %description
