@@ -16,7 +16,6 @@ Patch2:         magicpoint-1.09a-emacs-mode--add-font-lock.patch
 Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
 #Patch4:         magicpoint-1.10a-freetype.patch
 Patch5:         magicpoint-1.10a-missing-decl.patch
-BuildRoot:	%_tmppath/%{name}-buildroot
 Buildrequires:  freetype-devel flex byacc X11-devel
 BuildRequires:	imake gccmakedep
 Requires:	fonts-ttf-japanese libjpeg-progs
