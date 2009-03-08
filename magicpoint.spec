@@ -19,6 +19,7 @@ Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
 Buildrequires:  freetype-devel flex byacc X11-devel
 BuildRequires:	imake gccmakedep
+BuildRequires:	imlib-devel
 Requires:	libjpeg-progs
 #Requires:	fonts-ttf-japanese
 
