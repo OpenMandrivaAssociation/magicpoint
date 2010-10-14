@@ -1,6 +1,6 @@
 %define name	magicpoint
 %define version 1.13a
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Presentation tool
 Name:		%{name}
