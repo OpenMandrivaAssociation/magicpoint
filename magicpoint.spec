@@ -17,6 +17,7 @@ Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
 BuildRequires:	libx11-devel
 BuildRequires:	libxft-devel
+BuildRequires:	libxmu-devel
 BuildRequires:	imlib-devel
 Buildrequires:  flex byacc
 BuildRequires:	imake gccmakedep
