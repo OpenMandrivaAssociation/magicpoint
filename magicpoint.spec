@@ -1,6 +1,6 @@
 %define name	magicpoint
 %define version 1.13a
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Presentation tool
 Name:		%{name}
@@ -14,14 +14,13 @@ Patch0:         magicpoint-1.10a-remove-rpath.patch
 Patch1:         magicpoint-1.09a-defaults-to-latin1.patch
 Patch2:         magicpoint-1.09a-emacs-mode--add-font-lock.patch
 Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
-#Patch4:         magicpoint-1.10a-freetype.patch
-#Patch5:         magicpoint-1.10a-missing-decl.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
-Buildrequires:  freetype-devel flex byacc X11-devel
-BuildRequires:	imake gccmakedep
+BuildRequires:	libx11-devel
+BuildRequires:	libxft-devel
 BuildRequires:	imlib-devel
+Buildrequires:  flex byacc
+BuildRequires:	imake gccmakedep
 Requires:	libjpeg-progs
-#Requires:	fonts-ttf-japanese
 
 %description
 MagicPoint is an X11 based presentation tool. It is designed to make
@@ -32,22 +31,19 @@ presentation files quickly with your favorite editor (e.g. Emacs).
 It includes a true type library for elegant looking text and effects.
 
 %prep
-rm -rf %{buildroot}
-
 %setup -q
 #%patch0 -p1
 %patch1 -p1
 %patch2 -p1
-#%patch4 -p0
-#%patch5 -p0
 
 %build
 %configure2_5x --enable-locale
-xmkmf -a
+xmkmf
 make Makefiles
-
+make CCOPTIONS="%optflags" EXTRA_LDOPTIONS="%ldflags"
 
 %install
+rm -fr %buildroot
 %makeinstall_std install.man
 
 install -m 644 -D contrib/mgp-mode.el %{buildroot}%{_datadir}/emacs/site-lisp/mgp-mode.el
