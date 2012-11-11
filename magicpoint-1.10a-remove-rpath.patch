@@ -1,0 +1,22 @@
+--- magicpoint-1.09a/configure.in.pix	Tue May 22 08:09:42 2001
++++ magicpoint-1.09a/configure.in	Sun Oct  7 13:47:33 2001
+@@ -277,7 +277,7 @@
+ 		LIBS="$LIBS -L$i/lib"
+ 		OPTFLAGS="$OPTFLAGS -I$i/include"
+ 		AC_CHECK_LIB(mng, mng_initialize, 
+-			[LIBS="$LIBS -Wl,-rpath,$i/lib -lmng"
++			[LIBS="$LIBS -lmng"
+ 			 AC_DEFINE(MNG)], 
+ 		[AC_CHECK_LIB(mng, mng_readdisplay,
+ 			[LIBS="$LIBS -lmng -ljpeg"
+--- magicpoint-1.10a/configure.orig	2003-11-04 14:39:39.000000000 +0100
++++ magicpoint-1.10a/configure	2003-11-04 14:37:07.000000000 +0100
+@@ -5077,7 +5077,7 @@
+ echo "$as_me:$LINENO: result: $ac_cv_lib_mng_mng_initialize" >&5
+ echo "${ECHO_T}$ac_cv_lib_mng_mng_initialize" >&6
+ if test $ac_cv_lib_mng_mng_initialize = yes; then
+-  LIBS="$LIBS -Wl,-rpath,$i/lib -lmng"
++  LIBS="$LIBS -lmng"
+ 			 cat >>confdefs.h <<\_ACEOF
+ #define MNG 1
+ _ACEOF

@@ -1,0 +1,11 @@
+--- magicpoint-1.09a/draw.c.pix	Mon Sep 17 16:48:29 2001
++++ magicpoint-1.09a/draw.c	Sun Oct  7 14:57:41 2001
+@@ -1038,7 +1039,7 @@
+ 	char *data;
+ {
+ 	u_char *p, *q;
+-	char *registry = NULL;
++	char *registry = "iso8859-1";
+ 	u_int code2;
+ 	static char *rtab96[] = {
+ 		NULL,			/* ESC - @ */

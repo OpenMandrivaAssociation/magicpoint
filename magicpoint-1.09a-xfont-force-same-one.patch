@@ -1,0 +1,28 @@
+--- magicpoint-1.09a/draw.c.pix	Mon Oct  8 14:41:34 2001
++++ magicpoint-1.09a/draw.c	Mon Oct  8 19:01:50 2001
+@@ -2168,9 +2168,9 @@
+ 		registry = "iso8859-1";
+ 
+ 	if (siz < 0)
+-		strcpy(tmp2, "*");
++		strcpy(tmp2, "*-*-*-*");
+ 	else
+-		sprintf(tmp2, "%d", siz);
++		sprintf(tmp2, "%d-*-75-75", siz);
+ 
+ 	hyphen = 0;
+ 	for (p = seed; *p; p++) {
+@@ -2186,10 +2186,11 @@
+ 			break;
+ 		}
+ 		sprintf(tmp, "%s-*-*", seed);
+-		sprintf(buf, FONT_FORMAT, tmp, tmp2, registry);
++	
++		sprintf(buf, "-*-%s-*-*-%s-*-0-%s", tmp, tmp2, registry);
+ 		break;
+ 	case 2:
+-		sprintf(buf, FONT_FORMAT, seed, tmp2, registry);
++		sprintf(buf, "-*-%s-*-*-%s-*-0-%s", seed, tmp2, registry);
+ 		break;
+ 	case XLFD_HYPHEN:
+ 		/* as is */

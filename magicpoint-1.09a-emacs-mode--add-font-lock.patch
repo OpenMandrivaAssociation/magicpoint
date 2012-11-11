@@ -1,0 +1,49 @@
+--- magicpoint-1.09a/contrib/mgp-mode.el.pix	Fri Dec 17 20:21:19 1999
++++ magicpoint-1.09a/contrib/mgp-mode.el	Sun Oct  7 18:07:18 2001
+@@ -157,6 +157,17 @@
+ 		 ("^%.*" nil defun)
+ 		 ))))))
+ 
++(defvar mgp-font-lock-keywords
++  (list
++     ;; keywords
++     (cons (concat "^%\\(" (mapconcat 'identity mgp-directives "\\|") "\\)\\b") 0)
++
++     (cons "^%%.*\n" '(0 font-lock-comment-face t))
++
++;     (cons "^%.*" '(1 font-lock-function-name-face))
++     )
++  "Additional expressions to highlight in gmp mode.")
++
+ 
+ ;; History
+ (defvar mgp-history nil
+@@ -183,10 +194,13 @@
+ (if mgp-mode-syntax-table
+     ()
+   (setq mgp-mode-syntax-table (make-syntax-table))
+-  (modify-syntax-entry ?% ".   " mgp-mode-syntax-table)
+-  (modify-syntax-entry ?\" ".   " mgp-mode-syntax-table)
+-  (modify-syntax-entry ?\\ ".   " mgp-mode-syntax-table)
+-  (modify-syntax-entry ?' "w   " mgp-mode-syntax-table))
++
++  ;; comment delimiters
++  (modify-syntax-entry ?\# "<"  mgp-mode-syntax-table)
++  (modify-syntax-entry ?\n ">"  mgp-mode-syntax-table)
++  (modify-syntax-entry ?\%  "_ 23" mgp-mode-syntax-table)
++
++  (modify-syntax-entry ?\" "\"" mgp-mode-syntax-table))
+ 
+ ;; Mode Map
+ (defvar mgp-mode-map nil
+@@ -260,6 +274,10 @@
+   (make-local-variable 'mgp-page-separator)
+   (make-local-variable 'mgp-emph-color)
+   (make-local-variable 'mgp-emph-color-normal)
++
++  (make-local-variable 'font-lock-defaults)
++  (setq font-lock-defaults '(mgp-font-lock-keywords))
++
+   (run-hooks 'mgp-mode-hook))
+ 
+ 
