@@ -15,9 +15,9 @@ Patch1:         magicpoint-1.09a-defaults-to-latin1.patch
 Patch2:         magicpoint-1.09a-emacs-mode--add-font-lock.patch
 Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
 BuildRoot:	%_tmppath/%{name}-buildroot
-BuildRequires:	libx11-devel
-BuildRequires:	libxft-devel
-BuildRequires:	libxmu-devel
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xft)
+BuildRequires:	pkgconfig(xmu)
 BuildRequires:	imlib-devel
 Buildrequires:  flex byacc
 BuildRequires:	imake gccmakedep
