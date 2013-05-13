@@ -1,6 +1,6 @@
 %define name	magicpoint
 %define version 1.13a
-%define release %mkrel 4
+%define release  5
 
 Summary:	Presentation tool
 Name:		%{name}
@@ -14,7 +14,6 @@ Patch0:         magicpoint-1.10a-remove-rpath.patch
 Patch1:         magicpoint-1.09a-defaults-to-latin1.patch
 Patch2:         magicpoint-1.09a-emacs-mode--add-font-lock.patch
 Patch3:         magicpoint-1.09a-xfont-force-same-one.patch
-BuildRoot:	%_tmppath/%{name}-buildroot
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xft)
 BuildRequires:	pkgconfig(xmu)
