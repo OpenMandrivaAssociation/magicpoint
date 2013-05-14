@@ -1,11 +1,7 @@
-%define name	magicpoint
-%define version 1.13a
-%define release  5
-
 Summary:	Presentation tool
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		magicpoint
+Version:	1.13a
+Release:	6
 License:	BSD like
 URL:		http://member.wide.ad.jp/wg/mgp/
 Group:		Office
@@ -18,7 +14,8 @@ BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xft)
 BuildRequires:	pkgconfig(xmu)
 BuildRequires:	imlib-devel
-Buildrequires:  flex byacc
+BuildRequires:  ungif-devel
+BuildRequires:  flex byacc
 BuildRequires:	imake gccmakedep
 Requires:	libjpeg-progs
 
