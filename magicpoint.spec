@@ -1,7 +1,7 @@
 Summary:	Presentation tool
 Name:		magicpoint
 Version:	1.13a
-Release:	6
+Release:	7
 License:	BSD like
 URL:		http://member.wide.ad.jp/wg/mgp/
 Group:		Office
