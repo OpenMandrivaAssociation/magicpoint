@@ -3,7 +3,7 @@ Name:		magicpoint
 Version:	1.13a
 Release:	7
 License:	BSD like
-URL:		http://member.wide.ad.jp/wg/mgp/
+URL:		https://member.wide.ad.jp/wg/mgp/
 Group:		Office
 Source:		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/%{name}-%{version}.tar.gz
 Patch0:         magicpoint-1.10a-remove-rpath.patch
